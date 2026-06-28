@@ -4,11 +4,11 @@ import { PanelBody, PanelRow, TabPanel, TextareaControl, ToggleControl, SelectCo
 
 import { Label, Background, ColorControl, BtnGroup, Typography, HelpPanel, Device, ShadowControl } from '../../../../../bpl-tools/Components';
 import { BorderControl, SpaceControl } from '../../../../../bpl-tools/Components/Deprecated';
-import { tabController, updateData } from '../../../../../bpl-tools/utils/functions';
-import {  AdvertiseCard } from '../../../../../bpl-tools/ProControls';
+import { tabController } from '../../../../../bpl-tools/utils/functions';
+import { AdvertiseCard } from '../../../../../bpl-tools/ProControls';
 
-import { pluginSlug, animatedTextDocs, pricingPage } from '../../../utils/data';
-import { animateTypeOptions, FeaturesPro, generalStyleTabs } from '../../../utils/options';
+import { pluginSlug, animatedTextDocs } from '../../../utils/data';
+import { generalStyleTabs } from '../../../utils/options';
 import { animateInOpt, effects, inEffects, outEffects, sequences } from '../../../utils/options';
 import { withSelect } from '@wordpress/data';
 import { produce } from 'immer';
@@ -19,7 +19,7 @@ import { DropdownMenu } from '@wordpress/components';
 import { TextControl } from '@wordpress/components';
 import ThemeSwitcher from '../../../utils/panel/ThemeSwitcher';
 
-const Settings = ({ attributes, setAttributes, isPremium, device }) => {
+const Settings = ({ attributes, setAttributes }) => {
 	const { loop, animateIn, inEffect, inSequence, outEffect, outSequence, background, content, typography, color, padding, border, options, gsapAnimation = {}, animatedSize = {}, textAlignment = "center", repeat = true, alignment, prefixText = "", suffixText = "", prefixColor = "", prefixTypo = {}, suffixColor = "", suffixTypo = {} } = attributes;
 
 
@@ -27,16 +27,10 @@ const Settings = ({ attributes, setAttributes, isPremium, device }) => {
 	const [alertRandomColor, setAlertRandomColor] = useState(null);
 	const [alertShadow, setAlertShadow] = useState(null);
 
-	const [isProModalOpen, setIsProModalOpen] = useState(false);
-
-	const premiumProps = { isPremium, setIsProModalOpen };
 
 
-	// Define available easing options
-	const easeOptions = [
-		{ label: "Elastic", value: "elastic(0.3, 0.2)" },
-		{ label: "Bounce", value: "bounce.out" }
-	];
+
+
 
 	const itemOption = [
 		{ label: "Default", value: "default" },
