@@ -14,17 +14,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/development/chunk-IR6S3I6Y.mjs");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/development/chunk-IR6S3I6Y.mjs");
 /* harmony import */ var _bpl_tools_Admin_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../bpl-tools/Admin/Welcome */ "../bpl-tools/Admin/Welcome/index.js");
 /* harmony import */ var _bpl_tools_Admin_Demos__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../bpl-tools/Admin/Demos */ "../bpl-tools/Admin/Demos/index.js");
 /* harmony import */ var _bpl_tools_Admin_Pricing__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../bpl-tools/Admin/Pricing */ "../bpl-tools/Admin/Pricing/index.js");
 /* harmony import */ var _bpl_tools_Admin_FeatureCompare__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../bpl-tools/Admin/FeatureCompare */ "../bpl-tools/Admin/FeatureCompare/index.js");
-/* harmony import */ var _bpl_tools_Admin_Activation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../bpl-tools/Admin/Activation */ "../bpl-tools/Admin/Activation/index.js");
-/* harmony import */ var _bpl_tools_Admin_OurPlugins__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../bpl-tools/Admin/OurPlugins */ "../bpl-tools/Admin/OurPlugins/index.js");
-/* harmony import */ var _bpl_tools_Admin_Settings__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../bpl-tools/Admin/Settings */ "../bpl-tools/Admin/Settings/index.js");
-/* harmony import */ var _Layout_Layout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Layout/Layout */ "./dashboard/Layout/Layout.js");
-/* harmony import */ var _utils_data__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./utils/data */ "./dashboard/utils/data.js");
-
+/* harmony import */ var _bpl_tools_Admin_OurPlugins__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../bpl-tools/Admin/OurPlugins */ "../bpl-tools/Admin/OurPlugins/index.js");
+/* harmony import */ var _bpl_tools_Admin_Settings__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../bpl-tools/Admin/Settings */ "../bpl-tools/Admin/Settings/index.js");
+/* harmony import */ var _Layout_Layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Layout/Layout */ "./dashboard/Layout/Layout.js");
+/* harmony import */ var _utils_data__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./utils/data */ "./dashboard/utils/data.js");
 
 
 
@@ -37,65 +35,58 @@ __webpack_require__.r(__webpack_exports__);
 
 const App = props => {
   const {
-    isPremium,
-    hasPro,
     adminUrl
   } = props;
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.HashRouter, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Routes, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.HashRouter, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Routes, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     path: "/",
-    element: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    element: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], {
       ...props
     })
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     index: true,
     element: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_bpl_tools_Admin_Welcome__WEBPACK_IMPORTED_MODULE_1__["default"], {
       ...props,
-      ...(0,_utils_data__WEBPACK_IMPORTED_MODULE_9__.welcomeInfo)(adminUrl)
+      ...(0,_utils_data__WEBPACK_IMPORTED_MODULE_8__.welcomeInfo)(adminUrl)
     })
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     path: "welcome",
     element: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_bpl_tools_Admin_Welcome__WEBPACK_IMPORTED_MODULE_1__["default"], {
       ...props,
-      ...(0,_utils_data__WEBPACK_IMPORTED_MODULE_9__.welcomeInfo)(adminUrl)
+      ...(0,_utils_data__WEBPACK_IMPORTED_MODULE_8__.welcomeInfo)(adminUrl)
     })
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     path: "demos",
     element: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_bpl_tools_Admin_Demos__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      demoInfo: _utils_data__WEBPACK_IMPORTED_MODULE_9__.demoInfo,
+      demoInfo: _utils_data__WEBPACK_IMPORTED_MODULE_8__.demoInfo,
       ...props
     })
-  }), !isPremium && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     path: "pricing",
     element: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_bpl_tools_Admin_Pricing__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      pricingInfo: _utils_data__WEBPACK_IMPORTED_MODULE_9__.pricingInfo,
+      pricingInfo: _utils_data__WEBPACK_IMPORTED_MODULE_8__.pricingInfo,
       options: {},
       ...props
     })
-  }), !isPremium && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     path: "feature-comparison",
     element: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_bpl_tools_Admin_FeatureCompare__WEBPACK_IMPORTED_MODULE_4__["default"], {
       plans: ['free', 'pro'],
       ...props
     })
-  }), hasPro && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
-    path: "activation",
-    element: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_bpl_tools_Admin_Activation__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      ...props
-    })
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     path: "our-plugins",
-    element: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_bpl_tools_Admin_OurPlugins__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    element: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_bpl_tools_Admin_OurPlugins__WEBPACK_IMPORTED_MODULE_5__["default"], {
       ...props
     })
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     path: "settings",
-    element: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_bpl_tools_Admin_Settings__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    element: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_bpl_tools_Admin_Settings__WEBPACK_IMPORTED_MODULE_6__["default"], {
       ...props,
       ajaxAction: "atbSaveUninstallOption"
     })
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     path: "*",
-    element: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Navigate, {
+    element: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Navigate, {
       to: "/welcome",
       replace: true
     })
@@ -136,17 +127,10 @@ const navigation = [{
   name: 'Feature Comparison',
   href: '/feature-comparison'
 }, {
-  name: 'Activation',
-  href: '/activation'
-}, {
   name: 'Settings',
   href: '/settings'
 }];
 const Layout = props => {
-  const {
-    isPremium,
-    hasPro
-  } = props;
   const location = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_2__.useLocation)();
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "bPlDashboard"
@@ -154,9 +138,7 @@ const Layout = props => {
     ...props
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("nav", {
     className: "bPlDashboardNav"
-  }, navigation?.filter(item => item.href !== '/activation' || hasPro) // Hide activation link for non-pro users
-  ?.filter(item => !isPremium || !['/purchase', '/pricing', '/feature-comparison'].includes(item.href)) // Hide link for premium users
-  ?.map((item, index) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+  }, navigation?.map((item, index) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
     key: index,
     to: item.href,
     className: `navLink ${location.pathname === item.href ? 'active' : ''}`
@@ -189,22 +171,17 @@ const slug = "animated-text-block";
 const dashboardInfo = info => {
   const {
     version,
-    isPremium,
-    hasPro,
     licenseActiveNonce,
     adminUrl,
     deleteDataOnUninstall,
     uninstallNonce
   } = info;
-  const proSuffix = isPremium ? ' Pro' : '';
   return {
-    name: `Animated Text Block${proSuffix}`,
-    displayName: `Animated Text Block${proSuffix} - Add Typing and Looping Text Effects`,
+    name: `Animated Text Block`,
+    displayName: `Animated Text Block - Add Typing and Looping Text Effects`,
     description: "Animated Text Block is a dynamic and customizable plugin that brings to your website content to life with stunning text animations. Easily create eye-catching headlines, catchy slogans, or dynamic messages with powerful animation controls, multiple themes, and unique effects. Perfect for grabbing attention and enhancing user engagement on your WordPress site.",
     slug,
     version,
-    isPremium,
-    hasPro,
     displayOurPlugins: true,
     media: {
       logo: `https://ps.w.org/${slug}/assets/icon-128x128.png`,
@@ -736,539 +713,6 @@ const pricingInfo = {
     selected: 3 // choose from licenses item
   }
 };
-
-/***/ }),
-
-/***/ "../bpl-tools/Admin/Activation/index.js":
-/*!**********************************************!*\
-  !*** ../bpl-tools/Admin/Activation/index.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "../bpl-tools/Admin/Activation/style.scss");
-/* harmony import */ var _utils_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/icons */ "../bpl-tools/Admin/utils/icons.js");
-/* harmony import */ var _useLicense__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./useLicense */ "../bpl-tools/Admin/Activation/useLicense.js");
-
-
-
-
-
-
-
-/**
- * License activation / deactivation page.
- * Communicates with the bPlugins LicenseActivation.php AJAX bridge.
- *
- * @param {object} props
- * @param {string} props.name				- Plugin name
- * @param {string} props.slug				- WordPress.org slug (Freemius recover-license + EULA links)
- * @param {string} [props.version]			- Plugin version shown in the card header
- * @param {object} [props.media]			- {logo?}
- * @param {object} props.freemius			- {product_id, public_key}
- * @param {string} props.licenseActiveNonce	- wp_create_nonce('bPlLicenseActivation')
- */
-const Activation = props => {
-  const {
-    name,
-    slug,
-    version,
-    media,
-    freemius,
-    licenseActiveNonce
-  } = props;
-  const {
-    product_id,
-    public_key
-  } = freemius || {};
-  const {
-    logo
-  } = media || {};
-  const {
-    isActivated,
-    isLoading,
-    error,
-    activatedLicense,
-    activateLicense,
-    deactivateLicense
-  } = (0,_useLicense__WEBPACK_IMPORTED_MODULE_4__["default"])({
-    product_id,
-    public_key,
-    licenseActiveNonce
-  });
-  const [licenseKey, setLicenseKey] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
-  const [showLicense, setShowLicense] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  const [showActivationForm, setShowActivationForm] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  const [showConfirm, setShowConfirm] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  const [copied, setCopied] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  const handleActivation = async () => {
-    const ok = await activateLicense(licenseKey);
-    if (ok) {
-      setLicenseKey('');
-      setShowActivationForm(false);
-      window.location.reload();
-    }
-  };
-  const handleDeactivate = async () => {
-    setShowConfirm(false);
-    const ok = await deactivateLicense();
-    if (ok) {
-      setShowActivationForm(true);
-      setLicenseKey('');
-      window.location.reload();
-    }
-  };
-  const copyLicense = async () => {
-    if (!activatedLicense) return;
-    try {
-      await navigator.clipboard.writeText(activatedLicense);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1600);
-    } catch (e) {
-      // eslint-disable-next-line no-console
-      console.error(e.message);
-    }
-  };
-  const getMaskedLicense = license => {
-    if (!license) return '';
-    if (showLicense) return license;
-    const start = license.substring(0, 4);
-    const end = license.substring(license.length - 4);
-    const middle = '•'.repeat(Math.max(0, license.length - 8));
-    return `${start}${middle}${end}`;
-  };
-  const isChangeLicense = showActivationForm && isActivated;
-  const showSuccessView = isActivated && !showActivationForm;
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "bPlDashboardActivation"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("header", {
-    className: "actHero"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "actEyebrow"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('License')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, showSuccessView ? (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Your license is active') : isChangeLicense ? (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Change your license key') : (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Activate your license')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, showSuccessView ? (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("You're receiving security updates, new features and priority support for"), ' ', (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, name), '.') : (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Enter the license key you received with your purchase to unlock premium features and updates for'), ' ', (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, name), '.'))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
-    className: `actCard ${showSuccessView ? 'isActive' : 'isInactive'}`
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("header", {
-    className: "actCardHead"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "actPluginInfo"
-  }, logo && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-    src: logo,
-    alt: name || (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Plugin')
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, name || (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Plugin')), version && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "actVer"
-  }, "v", version))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: `actStatus ${isActivated ? 'isOk' : 'isOff'}`
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "actStatusDot"
-  }), isActivated ? (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Activated') : (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Not activated'))), isLoading && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "actLoading"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "actSpinner"
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Talking to the license server…'))), !isLoading && showSuccessView && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "actBody"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "actSuccessTop"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "actSuccessIcon"
-  }, _utils_icons__WEBPACK_IMPORTED_MODULE_3__.circleCheckIcon), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('License verified')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Your purchase code is bound to this site and is in good standing.')))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "actLicenseRow"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "actFieldLabel"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('License key')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "actLicenseDisplay"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
-    type: "text",
-    value: getMaskedLicense(activatedLicense),
-    readOnly: true
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    type: "button",
-    className: "actIconBtn",
-    onClick: () => setShowLicense(v => !v),
-    "aria-label": showLicense ? (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Hide license') : (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Show license')
-  }, showLicense ? _utils_icons__WEBPACK_IMPORTED_MODULE_3__.showLicenseIcon : _utils_icons__WEBPACK_IMPORTED_MODULE_3__.hideLicenseIcon), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    type: "button",
-    className: `actIconBtn ${copied ? 'isCopied' : ''}`,
-    onClick: copyLicense,
-    "aria-label": (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Copy license to clipboard')
-  }, _utils_icons__WEBPACK_IMPORTED_MODULE_3__.copyIcon, copied && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "actCopiedTip"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Copied'))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("footer", {
-    className: "actFoot"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    type: "button",
-    className: "actLinkBtn",
-    onClick: () => setShowActivationForm(true)
-  }, _utils_icons__WEBPACK_IMPORTED_MODULE_3__.refreshIcon, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Change license')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    type: "button",
-    className: "actLinkBtn isDanger",
-    onClick: () => setShowConfirm(true)
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Deactivate license')))), !isLoading && !showSuccessView && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "actBody"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
-    className: "actField"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "actFieldLabel"
-  }, _utils_icons__WEBPACK_IMPORTED_MODULE_3__.keyIcon, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('License key')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
-    type: "text",
-    value: licenseKey,
-    placeholder: "xxxx-xxxx-xxxx-xxxx-xxxx-xxxx",
-    onChange: e => setLicenseKey(e.target.value),
-    onKeyDown: e => e.key === 'Enter' && licenseKey.trim() && handleActivation(),
-    disabled: isLoading,
-    autoFocus: true,
-    spellCheck: false,
-    autoCapitalize: "none",
-    autoCorrect: "off"
-  })), error && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "actError"
-  }, _utils_icons__WEBPACK_IMPORTED_MODULE_3__.infoIcon, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, error)), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    type: "button",
-    className: "actPrimaryBtn",
-    onClick: handleActivation,
-    disabled: isLoading || !licenseKey.trim()
-  }, isLoading ? (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Activating…') : isChangeLicense ? (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Update License') : (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Activate License')), !isChangeLicense && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: "actHelp"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Can't find your key?"), ' ', (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: `https://dashboard.freemius.com/license-recovery/${product_id}/${slug}/`,
-    target: "_blank",
-    rel: "noopener noreferrer"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Recover license'), _utils_icons__WEBPACK_IMPORTED_MODULE_3__.externalIcon), ' ', (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('or'), ' ', (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "https://freemius.com/help/documentation/wordpress-sdk/license-activation-issues/",
-    target: "_blank",
-    rel: "noopener noreferrer"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('activation help'), _utils_icons__WEBPACK_IMPORTED_MODULE_3__.externalIcon)), !isChangeLicense && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "actPermsBlock"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, name, ' ', (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('needs the following to deliver updates & security patches')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    className: "actPerms"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "actPermIcon"
-  }, _utils_icons__WEBPACK_IMPORTED_MODULE_3__.shieldIcon), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('License essentials')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Homepage URL · Plugin version · SDK version')))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "actPermIcon"
-  }, _utils_icons__WEBPACK_IMPORTED_MODULE_3__.refreshIcon), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Plugin state')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Whether the plugin is active, deactivated or uninstalled')))))), !isChangeLicense && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("footer", {
-    className: "actLegalRow"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: `https://freemius.com/product/license-activation/${product_id}/${slug}/`,
-    target: "_blank",
-    rel: "noopener noreferrer"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Powered by Freemius')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "\xB7"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "https://freemius.com/privacy/",
-    target: "_blank",
-    rel: "noopener noreferrer"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Privacy Policy')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "\xB7"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: `https://freemius.com/product/${product_id}/${slug}/legal/eula/`,
-    target: "_blank",
-    rel: "noopener noreferrer"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('License Agreement'))), isChangeLicense && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    type: "button",
-    className: "actLinkBtn isCenter",
-    onClick: () => setShowActivationForm(false)
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Cancel and keep current license')))), showConfirm && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "actModal",
-    role: "dialog",
-    "aria-modal": "true"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "actModalBackdrop",
-    onClick: () => setShowConfirm(false)
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "actModalContent"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("header", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "actModalIcon"
-  }, _utils_icons__WEBPACK_IMPORTED_MODULE_3__.infoIcon), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Deactivate this license?')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('You can re-activate it later on this site or move it to a different one.')))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "actModalNote"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Premium features and automatic updates will stop on this site until you re-activate.')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("footer", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    type: "button",
-    className: "actModalCancel",
-    onClick: () => setShowConfirm(false)
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Keep license active')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    type: "button",
-    className: "actModalAction",
-    onClick: handleDeactivate
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Yes, deactivate'))))));
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Activation);
-
-/***/ }),
-
-/***/ "../bpl-tools/Admin/Activation/useActivateLicense.js":
-/*!***********************************************************!*\
-  !*** ../bpl-tools/Admin/Activation/useActivateLicense.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-/**
- * Hook to manage license activation.
- * 
- * @param {object} params - Configuration parameters
- * @param {string} params.product_id - Freemius product ID
- * @param {string} params.public_key - Freemius public key
- * @returns {object} Activation methods and state
- */
-const useActivateLicense = ({
-  product_id,
-  public_key,
-  licenseActiveNonce
-} = {}) => {
-  const [isLoading, setIsLoading] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  const [error, setError] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
-  const activateLicense = licenseKey => {
-    if (!licenseKey.trim()) {
-      return Promise.reject(new Error('Please enter a license key'));
-    }
-    setIsLoading(true);
-    setError(null);
-    return new Promise((resolve, reject) => {
-      wp.ajax.post(`bpl_${product_id}_activate_license`, {
-        license_key: licenseKey,
-        product_id: product_id || '',
-        public_key: public_key || '',
-        nonce: licenseActiveNonce
-      }).done(res => {
-        setIsLoading(false);
-        resolve(res);
-      }).fail(err => {
-        setIsLoading(false);
-        const message = err?.message || 'Activation failed';
-        setError(message);
-        reject(err);
-      });
-    });
-  };
-  return {
-    activateLicense,
-    isLoading,
-    error
-  };
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useActivateLicense);
-
-/***/ }),
-
-/***/ "../bpl-tools/Admin/Activation/useDeactivateLicense.js":
-/*!*************************************************************!*\
-  !*** ../bpl-tools/Admin/Activation/useDeactivateLicense.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-/**
- * Hook to manage license deactivation.
- * 
- * @returns {object} Deactivation methods and state
- */
-const useDeactivateLicense = ({
-  product_id,
-  licenseActiveNonce
-}) => {
-  const [isLoading, setIsLoading] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  const [error, setError] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
-  const deactivateLicense = () => {
-    setIsLoading(true);
-    setError(null);
-    return new Promise((resolve, reject) => {
-      wp.ajax.post(`bpl_${product_id}_deactivate_license`, {
-        nonce: licenseActiveNonce
-      }).done(res => {
-        setIsLoading(false);
-        resolve(res);
-      }).fail(err => {
-        setIsLoading(false);
-        const message = err?.message || 'Deactivation failed';
-        setError(message);
-        reject(err);
-      });
-    });
-  };
-  return {
-    deactivateLicense,
-    isLoading,
-    error
-  };
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useDeactivateLicense);
-
-/***/ }),
-
-/***/ "../bpl-tools/Admin/Activation/useLicense.js":
-/*!***************************************************!*\
-  !*** ../bpl-tools/Admin/Activation/useLicense.js ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _useLicenseStatus__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./useLicenseStatus */ "../bpl-tools/Admin/Activation/useLicenseStatus.js");
-/* harmony import */ var _useActivateLicense__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./useActivateLicense */ "../bpl-tools/Admin/Activation/useActivateLicense.js");
-/* harmony import */ var _useDeactivateLicense__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./useDeactivateLicense */ "../bpl-tools/Admin/Activation/useDeactivateLicense.js");
-
-
-
-
-
-/**
- * Hook to manage license status, activation, and deactivation.
- * Consolidates specialized hooks into a single interface.
- * 
- * @param {object} params - Configuration parameters
- * @returns {object} License state and methods
- */
-const useLicense = (params = {}) => {
-  const {
-    isActivated,
-    activatedLicense,
-    isLoading: isStatusLoading,
-    error: statusError,
-    refetch: refetchStatus,
-    setIsActivated,
-    setActivatedLicense
-  } = (0,_useLicenseStatus__WEBPACK_IMPORTED_MODULE_1__["default"])(params);
-  const {
-    activateLicense: performActivation,
-    isLoading: isActivating,
-    error: activationError
-  } = (0,_useActivateLicense__WEBPACK_IMPORTED_MODULE_2__["default"])(params);
-  const {
-    deactivateLicense: performDeactivation,
-    isLoading: isDeactivating,
-    error: deactivationError
-  } = (0,_useDeactivateLicense__WEBPACK_IMPORTED_MODULE_3__["default"])(params);
-  const [isLoading, setIsLoading] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true);
-  const [error, setError] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
-
-  // Sync local isLoading
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    setIsLoading(isStatusLoading || isActivating || isDeactivating);
-  }, [isStatusLoading, isActivating, isDeactivating]);
-
-  // Sync local error
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    const rawError = statusError || activationError || deactivationError;
-    if (rawError) {
-      const normalizedError = rawError?.message || (typeof rawError === 'string' ? rawError : 'An error occurred');
-      setError(normalizedError);
-    } else {
-      setError('');
-    }
-  }, [statusError, activationError, deactivationError]);
-  const activateLicense = async licenseKey => {
-    try {
-      await performActivation(licenseKey);
-      setIsActivated(true);
-      setActivatedLicense(licenseKey);
-      return true;
-    } catch (err) {
-      return false;
-    }
-  };
-  const deactivateLicense = async () => {
-    try {
-      await performDeactivation();
-      setIsActivated(false);
-      setActivatedLicense('');
-      return true;
-    } catch (err) {
-      return false;
-    }
-  };
-  return {
-    isActivated,
-    isLoading,
-    error,
-    activatedLicense,
-    activateLicense,
-    deactivateLicense,
-    setError,
-    refetch: refetchStatus
-  };
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useLicense);
-
-/***/ }),
-
-/***/ "../bpl-tools/Admin/Activation/useLicenseStatus.js":
-/*!*********************************************************!*\
-  !*** ../bpl-tools/Admin/Activation/useLicenseStatus.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _hooks_useWPAjax__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../hooks/useWPAjax */ "../bpl-tools/hooks/useWPAjax.js");
-
-
-
-/**
- * Hook to manage license status.
- * 
- * @returns {object} Status state and refetch method
- */
-const useLicenseStatus = ({
-  product_id,
-  licenseActiveNonce
-}) => {
-  const [isActivated, setIsActivated] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  const [activatedLicense, setActivatedLicense] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
-  const {
-    data,
-    isLoading,
-    refetch,
-    error
-  } = (0,_hooks_useWPAjax__WEBPACK_IMPORTED_MODULE_1__["default"])(`bpl_${product_id}_get_license_status`, {
-    nonce: licenseActiveNonce
-  });
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    if (data) {
-      setIsActivated(data.is_activated || false);
-      if (data.license_key) {
-        setActivatedLicense(data.license_key);
-      }
-    }
-  }, [data]);
-  return {
-    isActivated,
-    activatedLicense,
-    isLoading,
-    error,
-    refetch,
-    setIsActivated,
-    setActivatedLicense
-  };
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useLicenseStatus);
 
 /***/ }),
 
@@ -4496,19 +3940,6 @@ const useWPAjax = (action, params = {}, set = true) => {
   };
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useWPAjax);
-
-/***/ }),
-
-/***/ "../bpl-tools/Admin/Activation/style.scss":
-/*!************************************************!*\
-  !*** ../bpl-tools/Admin/Activation/style.scss ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
 
 /***/ }),
 

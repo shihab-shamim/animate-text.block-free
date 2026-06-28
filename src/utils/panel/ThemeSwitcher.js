@@ -25,7 +25,7 @@ const ThemeSwitcher = ({
         <Button
           className={`bpl_theme_picker-btn ${isActive ? "active" : ""}`}
           onClick={() => handleSelect(theme?.value)}
-          disabled={false} // keep clickable if you want up sell
+           // keep clickable if you want up sell
         >
           <span>{theme?.label}</span>
        
@@ -72,7 +72,6 @@ const ThemeSwitcher = ({
                       key={theme?.value}
                       className={`theme-card ${isActive ? "active" : ""}`}
                       onClick={() => {
-                        // if (isLocked) return; // keep clickable if you want up sell
                         handleSelect(theme?.value);
                         setOpen(false);
                       }}

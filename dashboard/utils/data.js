@@ -2,19 +2,18 @@ const slug = "animated-text-block";
 
 
 export const dashboardInfo = (info) => {
-    const { version, isPremium, hasPro, licenseActiveNonce, adminUrl, deleteDataOnUninstall, uninstallNonce } = info;
+    const { version, licenseActiveNonce, adminUrl, deleteDataOnUninstall, uninstallNonce } = info;
 
-    const proSuffix = isPremium ? ' Pro' : '';
+ 
 
     return {
-        name: `Animated Text Block${proSuffix}`,
-        displayName: `Animated Text Block${proSuffix} - Add Typing and Looping Text Effects`,
+        name: `Animated Text Block`,
+        displayName: `Animated Text Block - Add Typing and Looping Text Effects`,
         description:
             "Animated Text Block is a dynamic and customizable plugin that brings to your website content to life with stunning text animations. Easily create eye-catching headlines, catchy slogans, or dynamic messages with powerful animation controls, multiple themes, and unique effects. Perfect for grabbing attention and enhancing user engagement on your WordPress site.",
         slug,
         version,
-        isPremium,
-        hasPro,
+  
         displayOurPlugins: true,
         media: {
             logo: `https://ps.w.org/${slug}/assets/icon-128x128.png`,

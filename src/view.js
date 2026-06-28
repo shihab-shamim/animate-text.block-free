@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		</>);
 
 		animatedTextEl?.removeAttribute('data-attributes');
-			animatedTextEl?.removeAttribute('data-ispremium');
+		
 	});
 });
 
