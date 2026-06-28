@@ -1,8 +1,8 @@
 import { __ } from '@wordpress/i18n';
 import { InspectorControls, BlockControls } from '@wordpress/block-editor';
-import { PanelBody, PanelRow, TabPanel, TextareaControl, ToggleControl, SelectControl, RangeControl, __experimentalUnitControl as UnitControl } from '@wordpress/components';
+import { PanelBody, PanelRow, TabPanel, TextareaControl, ToggleControl, SelectControl } from '@wordpress/components';
 
-import { Label, Background, ColorControl, BtnGroup, Typography, HelpPanel, Device, ShadowControl } from '../../../../../bpl-tools/Components';
+import { Label, Background, ColorControl, BtnGroup, Typography, HelpPanel } from '../../../../../bpl-tools/Components';
 import { BorderControl, SpaceControl } from '../../../../../bpl-tools/Components/Deprecated';
 import { tabController } from '../../../../../bpl-tools/utils/functions';
 import { AdvertiseCard } from '../../../../../bpl-tools/ProControls';
@@ -11,7 +11,6 @@ import { pluginSlug, animatedTextDocs } from '../../../utils/data';
 import { generalStyleTabs } from '../../../utils/options';
 import { animateInOpt, effects, inEffects, outEffects, sequences } from '../../../utils/options';
 import { withSelect } from '@wordpress/data';
-import { produce } from 'immer';
 import { useState } from 'react';
 import { themeSwitch } from '../../../utils/config';
 import { ToolbarGroup } from '@wordpress/components';
