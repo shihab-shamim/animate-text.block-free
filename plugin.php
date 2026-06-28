@@ -9,8 +9,7 @@
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: animated-text-block
- * @fs_premium_only /freemius
- * @fs_free_only, /bplugins_sdk
+ * @fs_free_only, /vendor/freemius-lite
  */
 
 // ABS PATH
@@ -25,8 +24,7 @@ else {
 	define('ATB_VERSION', isset($_SERVER['HTTP_HOST']) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.2.5');
 	define('ATB_DIR_URL', plugin_dir_url(__FILE__));
 	define('ATB_DIR_PATH', plugin_dir_path(__FILE__));
-	define('ATB_HAS_FREE', 'animated-text-block/plugin.php' === plugin_basename(__FILE__));
-	define('ATB_HAS_PRO', 'animated-text-block-pro/plugin.php' === plugin_basename(__FILE__));
+
 
 	if (! function_exists('atb_fs')) {
 		// Create a helper function for easy SDK access.
@@ -35,14 +33,12 @@ else {
 			global $atb_fs;
 
 			if (! isset($atb_fs)) {
-				$fsStartPath = dirname(__FILE__) . '/freemius/start.php';
-				$bSDKInitPath = dirname(__FILE__) . '/freemius-lite/start.php';
+				
+				$bSDKInitPath = dirname(__FILE__) . '/vendor/freemius-lite/start.php';
 
-				if (ATB_HAS_PRO && file_exists($fsStartPath)) {
-					require_once $fsStartPath;
-				} else if (ATB_HAS_FREE && file_exists($bSDKInitPath)) {
+			
 					require_once $bSDKInitPath;
-				}
+				
 
 				$atbConfig = array(
 					'id'                  => '17879',
@@ -50,7 +46,7 @@ else {
 					'premium_slug'        => 'animated-text-block-pro',
 					'type'                => 'plugin',
 					'public_key'          => 'pk_64045f2c4e13c86dc40f805c6062b',
-					'is_premium'          => true,
+					'is_premium'          => false,
 					'premium_suffix'      => 'Pro',
 					// If your plugin is a serviceware, set this option to false.
 					'has_premium_version' => true,
@@ -67,7 +63,7 @@ else {
 					),
 				);
 
-				$atb_fs = (ATB_HAS_PRO && file_exists($fsStartPath)) ? fs_dynamic_init($atbConfig) : fs_lite_dynamic_init($atbConfig);
+				$atb_fs = fs_lite_dynamic_init($atbConfig);
 			}
 
 			return $atb_fs;
@@ -81,9 +77,6 @@ else {
 
 	// ... Your plugin's main file logic ...
 
-	function atbIsPremium(){
-		return ATB_HAS_PRO ? atb_fs()->can_use_premium_code() : false;
-	}
 
 	if (!class_exists('ATBPlugin')) {
 		class ATBPlugin
@@ -97,10 +90,6 @@ else {
 				// sub menu function hooks
 				add_action('admin_menu', [$this, 'addSubmenu']);
 				add_action('admin_enqueue_scripts', [$this, 'adminEnqueueScripts']);
-
-				// premium checker
-				add_action('wp_ajax_atbPipeChecker', [$this, 'atbPipeChecker']);
-				add_action('wp_ajax_nopriv_atbPipeChecker', [$this, 'atbPipeChecker']);
 
 				// dashboard settings (delete data on uninstall)
 				add_action('wp_ajax_atbSaveUninstallOption', [$this, 'atbSaveUninstallOption']);
@@ -208,18 +197,6 @@ else {
 			}
 
 
-			function atbPipeChecker()
-			{
-				$nonce = $_POST['_wpnonce'] ?? null;
-
-				if (!wp_verify_nonce($nonce, 'wp_rest')) {
-					wp_send_json_error('Invalid Request');
-				}
-
-				wp_send_json_success([
-					'isPipe' => atbIsPremium()
-				]);
-			}
 
 			function enqueueBlockAssets()
 			{
@@ -257,8 +234,6 @@ else {
 					id="atbDashboard"
 					data-info="<?php echo esc_attr(wp_json_encode([
 						'version'=>ATB_VERSION,
-						'isPremium' =>atbIsPremium(),
-						'hasPro' => ATB_HAS_PRO,
                     	'licenseActiveNonce' => wp_create_nonce( 'bPlLicenseActivation' ),
 						'adminUrl' => admin_url(),
 						'deleteDataOnUninstall' => (bool) get_option( 'atbDeleteDataOnUninstall', false ),
@@ -321,7 +296,5 @@ else {
 		new ATBPlugin();
 	}
 
-	if (ATB_HAS_PRO) {
-		require_once ATB_DIR_PATH . 'inc/LicenseActivation.php';
-	}
+	
 }

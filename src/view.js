@@ -30,3 +30,4 @@ document.addEventListener('DOMContentLoaded', () => {
 			animatedTextEl?.removeAttribute('data-ispremium');
 	});
 });
+
