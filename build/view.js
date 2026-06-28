@@ -2175,42 +2175,6 @@ const ThemeSwitch = props => {
 
 /***/ }),
 
-/***/ "./src/utils/ProNotice/ProNotice.js":
-/*!******************************************!*\
-  !*** ./src/utils/ProNotice/ProNotice.js ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _notice_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./notice.css */ "./src/utils/ProNotice/notice.css");
-
-
-
-const ProNotice = () => {
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "atb-premium-notice"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "atb-premium-notice__content"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "atb-premium-badge"
-  }, "Premium"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "atb-premium-text"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, "Premium Theme Locked"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "This animation style is available in the Pro version. Upgrade to unlock this beautiful design."))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "https://bplugins.com/products/animated-text-block/pricing/",
-    target: "_blank",
-    rel: "noopener noreferrer",
-    className: "atb-premium-btn"
-  }, "Upgrade to Pro \uD83D\uDE80"));
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProNotice);
-
-/***/ }),
-
 /***/ "./src/utils/config.js":
 /*!*****************************!*\
   !*** ./src/utils/config.js ***!
@@ -9916,18 +9880,6 @@ TweenMaxWithCSS = gsapWithCSS.core.Tween;
 
 /***/ }),
 
-/***/ "./src/utils/ProNotice/notice.css":
-/*!****************************************!*\
-  !*** ./src/utils/ProNotice/notice.css ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./src/style.scss":
 /*!************************!*\
   !*** ./src/style.scss ***!
@@ -11316,8 +11268,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_Common_Style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Components/Common/Style */ "./src/Components/Common/Style.js");
 /* harmony import */ var _utils_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils/data */ "./src/utils/data.js");
 /* harmony import */ var _Components_Frontend_Themes_ThemeSwitch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Components/Frontend/Themes/ThemeSwitch */ "./src/Components/Frontend/Themes/ThemeSwitch.js");
-/* harmony import */ var _utils_ProNotice_ProNotice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils/ProNotice/ProNotice */ "./src/utils/ProNotice/ProNotice.js");
-
 
 
 
@@ -11328,7 +11278,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const animatedTextEls = document.querySelectorAll('.wp-block-atb-animated-text');
   animatedTextEls.forEach(animatedTextEl => {
     const attributes = JSON.parse(animatedTextEl.dataset.attributes);
-    const isPremium = animatedTextEl.dataset.ispremium || false;
     const props = {
       attributes,
       id: animatedTextEl.id
@@ -11339,11 +11288,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const {
       theme
     } = options;
-    const proThemes = ['type1', 'type5', 'type6', 'type7', 'type8', 'type9', 'type10'];
-    const premiumTheme = !isPremium && proThemes.includes(theme);
     (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(animatedTextEl).render((0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Components_Common_Style__WEBPACK_IMPORTED_MODULE_3__["default"], {
       ...props
-    }), premiumTheme ? (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_utils_ProNotice_ProNotice__WEBPACK_IMPORTED_MODULE_6__["default"], null) : (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: `${_utils_data__WEBPACK_IMPORTED_MODULE_4__.prefix} ${theme}`
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Components_Frontend_Themes_ThemeSwitch__WEBPACK_IMPORTED_MODULE_5__["default"], {
       ...props

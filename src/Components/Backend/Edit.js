@@ -23,12 +23,11 @@ const Edit = props => {
 	const { theme } = options;
 	const id = `${prefix}-${clientId}`;
 
-	const { isPremium } = usePremiumInEditorV2('atbPipeChecker');
 
 
 
 	return <>
-		<Settings attributes={attributes} setAttributes={setAttributes} isPremium={isPremium} />
+		<Settings attributes={attributes} setAttributes={setAttributes} />
 
 		<div {...useBlockProps()} id={id}>
 			<Style attributes={attributes} id={id} />

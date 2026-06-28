@@ -4,7 +4,6 @@ import { __ } from "@wordpress/i18n";
 import "./style.scss";
 const ThemeSwitcher = ({
   themes = [],
-  isPro = false,
   isTooltip = false,
   visibleCount = 5,
   value = "default",
@@ -20,7 +19,6 @@ const ThemeSwitcher = ({
   };
   const ThemeButton = ({ theme }) => {
     const isActive = value === theme?.value;
-    const isLocked = theme?.isPro && !isPro;
 
     return (
       <Tooltip text={isTooltip ? theme?.tooltip : null}>
@@ -30,15 +28,7 @@ const ThemeSwitcher = ({
           disabled={false} // keep clickable if you want up sell
         >
           <span>{theme?.label}</span>
-          {isLocked && (
-            <span
-              className={`bpl_theme_picker-btn-labelPro ${
-                isActive ? "active" : ""
-              }`}
-            >
-              Pro
-            </span>
-          )}
+       
         </Button>
       </Tooltip>
     );
@@ -75,14 +65,12 @@ const ThemeSwitcher = ({
               <div className="bpl_theme_picker_popover-grid">
                 {existingThemes?.map((theme) => {
                   const isActive = value === theme?.value;
-                  const isLocked = !isPro && theme?.isPro;
+                 
 
                   return (
                     <div
                       key={theme?.value}
-                      className={`theme-card ${isActive ? "active" : ""} ${
-                        isLocked ? "locked" : ""
-                      }`}
+                      className={`theme-card ${isActive ? "active" : ""}`}
                       onClick={() => {
                         // if (isLocked) return; // keep clickable if you want up sell
                         handleSelect(theme?.value);
@@ -96,11 +84,7 @@ const ThemeSwitcher = ({
 
                       <span className="theme-name">
                         {theme?.label}
-                        {theme?.isPro && !isPro && (
-                          <span className="pro-tag">
-                            <Dashicon size={10} icon="lock" />
-                          </span>
-                        )}
+                     
                       </span>
                     </div>
                   );
